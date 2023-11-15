@@ -1,0 +1,93 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.header{
+    background-image: url(images/Headerback.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-degrades{
+        height: 100vh;
+        background: linear-gradient(to bottom right, rgba(#60A0D8, 0.6), rgba($vert, 0.6));
+        z-index: 20;
+
+        &-titre{
+            font-family: $poppins;
+            font-size: $h1;
+            font-weight: $normal;
+            justify-content: center;
+            text-align: center ;
+            line-height: inherit;
+            color: $blanc;
+            margin-top: 100px;
+            height: 22%;
+        }
+
+        &-sous-titre{
+            font-family: $poppins;
+            font-size: $large;
+            font-style: italic;
+            justify-content: center;
+            text-align: center ;
+            line-height: inherit;
+            color: $blanc;
+            rotate: -12deg;
+            margin-left: 10%;
+        }
+        &-social_links{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 15px;
+            height: 35%;
+
+            img{
+                position: relative;
+                left: 90%;
+                top: 38%;
+            }
+        }
+
+    }
+    nav{
+    display: flex;
+    z-index: 30;
+
+        ul{
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            width: 100%;
+            padding: 2%;
+            li{
+                margin-left: 16px;
+                list-style: none;
+
+
+                a{
+                    text-decoration: none;
+                    color: $blanc;
+                    display: inline-block;
+                    font-weight: $light;
+                    font-family: $poppins;
+                    font-size: $small;
+
+                    &:hover{  
+                        
+                        &::after{
+                            content: "";
+                            position: relative;
+                            display: flex;
+                            width: 50%;
+                            height: 2px;
+                            background-color: $blanc;
+                            left: 25%;         
+                        }            
+                    }
+                }
+            }
+
+        }
+    }
+}

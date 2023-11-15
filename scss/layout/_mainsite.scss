@@ -1,0 +1,60 @@
+.salade{
+    background-image: url(images/fond.png);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1fr;
+    gap: 10px;
+
+    &-content{
+        padding: 15%;
+        margin-left: 5%;
+        grid-column: span 3;
+
+        &-titre{
+            width: 140%;
+            font-size: $large;
+            font-weight: $semibold;
+            font-family: $poppins;
+            color: $vert;
+        }
+
+        &-description{
+            margin-top: 5%;
+            font-size: $small;
+            font-weight: $normal;
+            font-family: $poppins;
+        }
+      }
+    
+    
+     &-img{
+        width: 780px;
+        padding: 20px;
+        overflow: hidden;
+      }
+}
+
+
+.preparation{
+    background-image: url(images/preparationfond.png);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-titre{
+        font-size: $large;
+        font-weight: $semibold;
+        font-family: $poppins;
+        color: $vert;
+    }
+    &-description{
+        margin-top: 5%;
+        font-size: $small;
+        font-weight: $normal;
+        font-family: $poppins;
+        color: $blanc;
+    }
+}

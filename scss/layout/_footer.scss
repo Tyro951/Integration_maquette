@@ -1,3 +1,36 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
+footer{
+    margin-top: 100px;
+    height: 35vh;
+    bottom: 0;
+    background-color: $vert;
+    img{
+        width: 20%;
+        height: 20%;
+        margin-left: 2%;
+        margin-top: 5%;
+    }
+}
+
+.flexfoot{
+    display: flex;
+    gap: 12%;
+    &-column{
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+        &-titre{
+            margin-top: 25%;
+            font-family: $poppins;
+            font-size: $btn;
+            font-weight: $semibold;
+            color: $blanc;
+        }
+        &-content{
+            margin-top: 2%;
+            font-family: $poppins;
+            font-size: $small;
+            font-weight: $normal;
+            color: $blanc;
+        }
+    }
+}

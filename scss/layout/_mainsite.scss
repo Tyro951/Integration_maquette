@@ -40,21 +40,294 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
+    &-fondvert{
+        position: relative;
+        background-color: rgba($vert, 0.7);
+        align-items: center;
+        text-align: center;
+        top: 6%;
+        left: 45%;
+        height: 90%;
+        width: 45%;
+        padding: 2%;
+
+        &-titre{
+            font-size: $large;
+            font-weight: $semibold;
+            font-family: $poppins;
+            color: $blanc;
+        }
+        &-description{
+            margin-top: 5%;
+            font-size: $small;
+            font-weight: $normal;
+            font-family: $poppins;
+            color: $blanc;
+        }
+    }
+}
+
+.menu{
+    background-image: url(images/Grillederepetition2.png);
+    height: 145vh;
+    width: 100%;
     &-titre{
+        margin-top: 2%;
         font-size: $large;
         font-weight: $semibold;
         font-family: $poppins;
         color: $vert;
+        text-align: center;
     }
     &-description{
-        margin-top: 5%;
+        position: relative; 
+        margin: 0 auto;
+        width: 60%;
+        margin-top: 2%;
         font-size: $small;
         font-weight: $normal;
         font-family: $poppins;
-        color: $blanc;
+        text-align: center;
+    }
+    &-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        &-1{
+            grid-column: span 1;
+            margin-left: 20%;
+            margin-top: 5%;
+            &-flexbox{
+                display: flex;
+                flex-direction: column;
+                &-entete{
+                    margin-top: 5%;
+                    display: flex;
+                    width: 70%;
+                    &-nom{
+                        font-size: $btn;
+                        font-weight: $semibold;
+                        font-family: $poppins;
+                        color: $vert;
+                        flex: 2;
+                    }
+                    &-prix{
+                        font-size: $btn;
+                        font-weight: $semibold;
+                        font-family: $poppins;
+                        color: $vert;
+                    }
+                }
+                &-content{
+                    margin-top: 3%;
+                    font-size: $small;
+                    font-weight: $normal;
+                    font-family: $poppins;
+                }
+            }
+        }
+        &-2{
+            grid-column: span 1;
+
+            &-column{
+                display: flex;
+                flex-direction: column;
+                width: 78%;
+                margin-top: 10%;
+                padding: 10%;
+                align-items: center;
+                justify-content: center;
+
+                &-titre{
+                    font-family: $poppins;
+                    font-size: $larger;
+                    font-weight: $normal;
+                    font-style: italic;
+                    transform: rotate(-12deg);
+                    margin-bottom: 25%;
+                    &-vert{
+                        color: $vert;
+                    }
+                    &-bleu{
+                        color: $bleu;
+                    }
+                }
+                &-description{
+                    font-family: $poppins;
+                    font-size: $small;
+                    font-weight: $normal;
+                    padding-bottom: 10%;
+                }
+            }
+        }
     }
 }
+
+.vertbleu{
+    background-image: url(images/fondsalade.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    &-box{
+        display: flex;
+        gap: 2% ;
+        &-vert{
+            margin-top: 9%;
+            margin-left: 5%;
+            text-align: center;
+            padding: 3%;
+            padding-left: 7%;
+            padding-right: 7%;
+            background-color: rgba($vert, 0.8);
+            &-titre{
+                font-family: $poppins;
+                font-size: $large;
+                font-weight: $semibold;
+                color: $blanc;
+                margin-top: 2%;
+            }
+            &-content{
+                margin-top: 12%;
+                display: flex;
+                justify-content: center;
+                font-family: $poppins;
+                font-weight: $normal;
+                font-size: $small;
+                color: $blanc;
+                gap: 100px;
+            }
+        }
+        &-bleu{
+            margin-top: 9%;
+            margin-left: 5%;
+            text-align: center;
+            padding: 3%;
+            padding-left: 7%;
+            padding-right: 7%;
+            background-color: rgba($bleu, 0.8);
+            &-titre{
+                font-family: $poppins;
+                font-size: $large;
+                font-weight: $semibold;
+                color: $blanc;
+                margin-top: 2%;
+            }
+            &-content{
+                margin-top: 12%;
+                display: flex;
+                justify-content: center;
+                font-family: $poppins;
+                font-weight: $normal;
+                font-size: $small;
+                color: $blanc;
+                gap: 100px;
+            }
+        }
+    }
+}
+.form{
+    background-image: url(images/fond.png);
+    height: 100vh;
+    display: flex;
+    &-head{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 7%;
+        margin-left: 5%;
+        &-titre{
+            font-family: $poppins;
+            font-size: $large;
+            font-weight: $semibold;
+            color: $vert;
+        }
+        &-description{
+            font-family: $poppins;
+            font-size: $small;
+            font-weight: $normal;
+            width: 60%;
+        }
+        &-input1{
+            margin-top: 4%;
+            display: flex;
+            gap: 10%;
+            p{
+                font-family: $poppins;
+                font-size: $small;
+                font-weight: $normal;
+                font-style: italic;
+                color: $vert;
+            }
+            input[type="text"]{
+                border-color: rgb(160, 156, 156);
+                border-style:double;
+                height: 50px;
+            }
+        }
+        &-email{
+            p{
+                font-family: $poppins;
+                font-size: $small;
+                font-weight: $normal;
+                font-style: italic;
+                color: $vert;
+            }
+            input[type="text"]{
+                border-color: rgb(160, 156, 156);
+                border-style:double;
+                height: 50px;
+            }
+        }
+        &-emaill{
+            p{
+                font-family: $poppins;
+                font-size: $small;
+                font-weight: $normal;
+                font-style: italic;
+                color: $vert;
+            }
+            input[type="text"]{
+                border-color: rgb(160, 156, 156);
+                border-style:double;
+                height: 130px;
+                margin-bottom: 50px;
+            }
+        }
+        .ensavoirplus{
+            margin-top: 50px;
+            margin: 0 auto;
+            width: 50%;
+        }
+    }
+    &-bolsalade {
+        
+        background-image: url(images/bolsalade.png);
+        width: 40%;
+        height: 80%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 13%;
+        margin-left: 5%;
+        display: block; 
+        position: relative;
+        &-trait1{
+            margin: 0 auto;
+            width: 2%;
+            height: 100%;
+            background: $blanc;
+        }
+        &-trait2{
+            position: absolute;
+            width: 100%;
+            height: 2%;
+            background: $blanc;
+            bottom: 48%;
+        }
+    }
+}
+
